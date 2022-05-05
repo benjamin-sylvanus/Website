@@ -15,6 +15,7 @@ export default class Coldflex extends React.Component {
                     <p>Paragraph of text beneath the heading to explain the heading. We'll add onto it with
                         another
                         sentence and probably just keep going until we run out of words.</p>
+                    {/* eslint-disable-next-line jsx-a11y/anchor-is-valid */}
                     <a href="#" className="btn btn-primary">
                         Primary button
                     </a>
