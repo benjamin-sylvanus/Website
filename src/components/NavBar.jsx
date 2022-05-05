@@ -4,7 +4,7 @@ import {CSSTransition} from 'react-transition-group';
 
 class NavBar extends Component {
     render() {
-        const {elements, formation, doLoad, time} = this.props;
+        const {elements, formation, doLoad} = this.props;
         let d = 100
         if(doLoad) {
             return (

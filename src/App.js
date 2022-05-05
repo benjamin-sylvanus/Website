@@ -26,9 +26,9 @@ class App extends Component {
                     <nav className="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
                         <div className="container-fluid">
                             <NavBar elements={this.state.navLeft} formation="navbar-nav me-auto mb-2 mb-lg-0"
-                                    doLoad={true} wait={0} time={this.state.t}></NavBar>
+                                    doLoad={true} wait={0} ></NavBar>
                             <NavBar elements={this.state.navRight} formation="navbar-nav me-auto mb-2 mb-md-0"
-                                    doLoad={true} wait={1000} time={this.state.t}/>
+                                    doLoad={true} wait={1000}/>
                         </div>
                     </nav>
                 </CSSTransition>
