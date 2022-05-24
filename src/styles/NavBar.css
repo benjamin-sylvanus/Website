@@ -1,0 +1,20 @@
+.navbar{
+    margin: 0% 2%;
+}
+
+navbar-collapse {
+
+}
+
+.navbar-collapse.collapse.show {
+
+    display: flex;
+    flex-direction: row;
+}
+
+.collapsing,.collapse{display: flex; flex-direction: row}
+
+
+.navbar-toggler {
+
+}

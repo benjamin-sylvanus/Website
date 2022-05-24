@@ -2,33 +2,41 @@ import React, {Component} from 'react';
 import {CSSTransition} from "react-transition-group";
 
 class Hero extends Component {
+    state = {width: 0, height: 0, marginal: 0};
 
     render() {
-        return (
-            <CSSTransition className="px-4 py-5 my-5 text-center" in={this} appear={true} timeout={2000} style={{transitionDelay: this.props.delay}} >
-                <div className="px-4 py-5 my-5 text-center">
-                    <img className="d-block mx-auto mb-4" src="/docs/5.1/assets/brand/bootstrap-logo.svg" alt=""
-                         width="72"
-                         height="57"/>
-                    <h1 className="display-5 fw-bold">Centered hero</h1>
-                    <div className="col-lg-6 mx-auto">
-                        <p className="lead mb-4">Quickly design and customize responsive mobile-first sites with
-                            Bootstrap,
-                            the world’s most popular front-end open source toolkit, featuring Sass variables and
-                            mixins,
-                            responsive grid system, extensive prebuilt components, and powerful JavaScript
-                            plugins.</p>
-                        <div className="d-grid gap-2 d-sm-flex justify-content-sm-center">
-                            <button type="button" className="btn btn-primary btn-lg px-4 gap-3">Primary button
-                            </button>
-                            <button type="button" className="btn btn-outline-secondary btn-lg px-4">Secondary
-                            </button>
-                        </div>
-                    </div>
+        return (<CSSTransition className="px-4 py-5 text-center" in={this} appear={true} timeout={2000}
+                               style={{
+                                   transitionDelay: this.props.delay,
+                                   height: this.state.height - this.state.marginal  ,
+                                   marginTop: this.state.marginal + "px"
+                               }}>
+            <div className="px-4 py-5 my-5 text-center">
+                {/*<span> Window size: {this.state.width} x {this.state.height} </span>*/}
+                <h1 className="display-3 fw-bold">Hi. I'm Ben.</h1>
+                <h1 className="display-3 fw-bold">A Bioengineer.</h1>
+                <div className="d2 mx-auto">
+                        <p className="a-flow">I specialized in Signal and Image Processing which introduced me to the
+                            world of computer science.</p>
                 </div>
-            </CSSTransition>
-        )
+            </div>
+
+        </CSSTransition>)
     }
+
+    updateDimensions = () => {
+        this.setState({width: window.innerWidth, height: window.innerHeight, marginal: window.innerHeight/5});
+    }
+
+    componentDidMount() {
+        window.addEventListener('resize', this.updateDimensions);
+        this.updateDimensions();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.updateDimensions)
+    }
+
 }
 
 export default Hero;

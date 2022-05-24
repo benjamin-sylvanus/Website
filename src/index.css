@@ -64,6 +64,7 @@
 .canvas{
     background: #343a40;
 }
+
 #body {
     margin: 0;
     font-family: var(--bs-body-font-family);
@@ -71,9 +72,13 @@
     font-weight: var(--bs-body-font-weight);
     line-height: var(--bs-body-line-height);
     color: var(--bs-body-color);
-    background-color: #343a40;
+    background-color: #282c34;
     -webkit-text-size-adjust: 100%;
     -webkit-tap-highlight-color:transparent
+}
+
+.a-flow {
+    font-size: clamp(14px, 1.5vw, 22px);
 }
 
 .ms-3 {
@@ -83,15 +88,130 @@
 .me-2 { margin-right:.5rem !important }
 
 .mb-3 { margin-bottom:1rem !important }
-.container{ background: #282c34; }
+
+.Container{ background: #282c34;
+    margin: 0% 2%;
+    max-width: 100%;
+}
 
 
 code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
 
 .d1 { min-width: 20%; }
+.d2 {
+    position: relative;
+    width: 100%;
+    min-height: 1px;
+
+    padding-right: 15px;
+    padding-left: 15px;
+
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 50%;
+    flex: 0 0 50%;
+    min-width: 20%;
+    max-width: 55%;
+
+
+}
 
 .div{ background-color: #282c34}
 
+.navbar { background: #282c34;}
+
+.container-fluid { background: #282c34}
+
+
+.b-example-divider {
+    height: 3rem;
+    background-color: rgba(0, 0, 0, .1);
+    border: solid rgba(0, 0, 0, .15);
+    border-width: 1px 0;
+    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
+}
+
+.bi {
+    vertical-align: -.125em;
+    fill: currentColor;
+}
+
+.contact1 {
+    /* Email */
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+
+    color: #000000;
+
+
+    /* Inside auto layout */
+    order: 0;
+    flex-grow: 0;
+}
+
+.contact2{
+    visibility: hidden;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+
+    color: #000000;
+    /* Inside auto layout */
+    order: 1;
+    flex-grow: 0;
+}
+
+.contact3 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: grey;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+.contact4 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    color: #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+}
+
+/* Auto layout */
+.contact-d {
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    align-items: center;
+    padding: 20px 20px;
+    gap: 30px;
+
+    position: relative;
+    width: 218px;
+    height: 51px;
+
+    background: #FFFFFF;
+}
+
+
+/*Transitions*/
 .a.nav-link.appear {
     opacity: 0;
 }
@@ -171,16 +291,4 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
     transition: opacity 2s cubic-bezier(0.5, -0.2, 0.32, 1), margin-top 0.5s cubic-bezier(0.5, -0.2, 0.32, 1);
 }
 
-.b-example-divider {
-    height: 3rem;
-    background-color: rgba(0, 0, 0, .1);
-    border: solid rgba(0, 0, 0, .15);
-    border-width: 1px 0;
-    box-shadow: inset 0 .5em 1.5em rgba(0, 0, 0, .1), inset 0 .125em .5em rgba(0, 0, 0, .15);
-}
-
-.bi {
-    vertical-align: -.125em;
-    fill: currentColor;
-}
 
