@@ -25,8 +25,7 @@ class AboutMe extends Component {
     render() {
 
         return (//Fill in about me
-            // <div className="row align-items-center" style={rowStyles}>
-                <div style={rowStyles}>
+            <div className="row align-items-center">
                 <div style={{flexBasis: "70%"}}>
                     <Divider orientation="left">
                         <h2> About Me</h2>
