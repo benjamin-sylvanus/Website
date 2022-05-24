@@ -9,16 +9,6 @@ const renderTooltip = (props, text) => (<Tooltip id="email-tooltip" {...props}>
         {text}
     </Tooltip>);
 
-const rowStyles = {
-    display: "-webkit-box",
-    flexWrap: "wrap",
-    marginRight: "-15px",
-    marginLeft: "-15px",
-    webkitBoxAlign: "center !important",
-    alignItems: "center !important"
-}
-
-
 
 
 class AboutMe extends Component {
