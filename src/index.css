@@ -1,7 +1,8 @@
-#html{
+#html {
     background: #282c34;
 }
-#root{
+
+#root {
     background: #282c34;
     color: floralwhite;
     min-height: 100%;
@@ -58,10 +59,10 @@
     --bs-body-font-weight: 400;
     --bs-body-line-height: 1.5;
     --bs-body-color: #212529;
-    --bs-body-bg:#fff
+    --bs-body-bg: #fff
 }
 
-.canvas{
+.canvas {
     background: #343a40;
 }
 
@@ -74,7 +75,7 @@
     color: var(--bs-body-color);
     background-color: #282c34;
     -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color:transparent
+    -webkit-tap-highlight-color: transparent
 }
 
 .a-flow {
@@ -82,22 +83,32 @@
 }
 
 .ms-3 {
-    margin-left:1rem !important
+    margin-left: 1rem !important
 }
 
-.me-2 { margin-right:.5rem !important }
+.me-2 {
+    margin-right: .5rem !important
+}
 
-.mb-3 { margin-bottom:1rem !important }
+.mb-3 {
+    margin-bottom: 1rem !important
+}
 
-.Container{ background: #282c34;
+.Container {
+    background: #282c34;
     margin: 0% 2%;
     max-width: 100%;
 }
 
 
-code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace; }
+code {
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
 
-.d1 { min-width: 20%; }
+.d1 {
+    min-width: 20%;
+}
+
 .d2 {
     position: relative;
     width: 100%;
@@ -115,11 +126,17 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 
 }
 
-.div{ background-color: #282c34}
+.div {
+    background-color: #282c34
+}
 
-.navbar { background: #282c34;}
+.navbar {
+    background: #282c34;
+}
 
-.container-fluid { background: #282c34}
+.container-fluid {
+    background: #282c34
+}
 
 
 .b-example-divider {
@@ -133,6 +150,10 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 .bi {
     vertical-align: -.125em;
     fill: currentColor;
+}
+
+.ul-left {
+    padding-inline-start: 0;
 }
 
 .contact1 {
@@ -153,7 +174,7 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
     flex-grow: 0;
 }
 
-.contact2{
+.contact2 {
     visibility: hidden;
     font-family: 'Inter';
     font-style: normal;
@@ -212,10 +233,36 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
 
 
 /*Transitions*/
+.hero.appear {
+    opacity: 0;
+    filter: blur(1px);
+    transform: scale(1.2);
+
+}
+.hero.appear-active {
+    opacity: 1;
+    filter: none;
+    transform: none;
+    transition:
+            opacity 1s cubic-bezier(0.68, -0.6, 0.32, 1.4),
+            filter 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4),
+            transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4);
+}
+
+.hero-appear-done {
+    opacity: 1;
+    scroll-behavior: auto;
+    transform: none;
+    filter: none;
+}
+
+
+
 .a.nav-link.appear {
     opacity: 0;
 }
-.nav-link.appear{
+
+.nav-link.appear {
     color: floralwhite;
     opacity: 0;
 }
@@ -290,5 +337,119 @@ code { font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', mon
     opacity: 1;
     transition: opacity 2s cubic-bezier(0.5, -0.2, 0.32, 1), margin-top 0.5s cubic-bezier(0.5, -0.2, 0.32, 1);
 }
+
+
+.about-me-transition-wrapper {
+    opacity: 0;
+}
+
+.fade-enter {
+    /*background-color: #b3d7ff;*/
+    filter: blur(4px);
+    opacity: 0.5;
+}
+
+.fade-active-enter {
+    opacity: 1;
+    filter: blur(0);
+    transition: all 1s ease-in;
+}
+
+.fade-done-enter {
+    opacity: 1;
+    scroll-behavior: smooth;
+    filter: none;
+}
+
+
+/*******************************
+ABOUT ME TRANSITION
+********************************/
+
+
+.transition-wrapper {
+    opacity: 0;
+    transform: scale(1.2);
+    filter: blur(5px);
+}
+
+.transition-wrapper-w {
+    opacity: 0;
+    transform: scale(1.01);
+    filter: blur(2px);
+}
+
+.transition-wrapper-e {
+    opacity: 0;
+    transform: scale(1.01);
+    filter: blur(2px);
+}
+
+
+@media (prefers-reduced-motion: no-preference) {
+    .transition-wrapper .transition-wrapper-w .transition-wrapper-e {
+        transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .about-me-wrapper {
+        transition: opacity 0.5s ease, transform 0.5s ease, filter 0.5s ease;
+    }
+
+    .work-wrapper {
+        transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+    }
+
+    .experience-wrapper {
+        transition: opacity 1s ease, transform 1s ease, filter 1s ease;
+    }
+}
+
+.about-me-wrapper {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+.work-wrapper {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+.experience-wrapper {
+    opacity: 1;
+    transform: none;
+    filter: none;
+}
+
+
+.wrapper-card {
+    background-color: rgba(5, 23, 65, 0.46) !important;
+    transition: all 1s;
+}
+.wrapper-card:hover {
+    background-color: rgba(11, 28, 77, 0.32) !important;
+    transition: all 1s;
+}
+
+
+.image-holder-wrapper {
+    opacity: 1;
+    filter: grayscale(50%);
+    transition: all 0.5s;
+}
+
+.image-holder-wrapper-hov {
+    opacity: 1;
+    filter: none;
+    transition: all 0.5s;
+}
+
+
+
+
+
+
+
 
 

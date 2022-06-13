@@ -6,6 +6,8 @@ import NavBar from "./components/NavBar";
 import EmailContact from "./components/emailContact";
 import AboutMe from "./components/AboutMe";
 import WorkExperience from "./components/WorkExperience";
+import Experience from "./components/Experience";
+import Contact from "./components/Contact";
 
 
 class App extends Component {
@@ -18,14 +20,14 @@ class App extends Component {
 
     render() {
         return (
-            <div>
+            <div scroll="no">
                 <NavBar/>
                 <main className="container">
-                    <Hero delay="0ms"/>
+                    <Hero delay="2000ms"/>
                     <AboutMe/>
                     <WorkExperience/>
-                    <EmailContact email={this.state.email}/>
-                    <Foot/>
+                    <Experience/>
+                    <Contact email={this.state.email}></Contact>
                 </main>
             </div>
         );

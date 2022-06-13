@@ -30,36 +30,75 @@ class WorkExperience extends Component {
                 </p>
                 <p>Designed and installed components for the wildland fire study</p>
             </ul>, key: "1"
-        }]
+        }],
+
+        wrapperClassName: 'transition-wrapper-w',
+        observe: true
     };
 
 
     render() {
         return (//Fill in about me
-            <div style={{paddingTop: "20%", paddingBottom: "70%"}}>
-                <div style={{width: "70%"}}>
-                    <Divider orientation="center">
-                        <h2>Work</h2>
-                    </Divider>
-                </div>
-                <div className="row flex justify-content-lg-start">
-
-                    <div>
-                        <Tabs defaultActiveKey="0" tabPosition='left' style={{height: "auto"}}>
-                            {this.state.tabList.map(t => {
-                                return (<TabPane tab={t.name} key={t.key} style={{width: "90%"}}>
-                                        {t.value}
-                                    </TabPane>)
-                            })}
-                        </Tabs>
-                    </div>
-                    <div style={{flexBasis: "90%", flexGrow: 1}}>
-                        <Divider orientation="right">
-                            <h2>Experience</h2>
+            <div>
+                <div className={this.state.wrapperClassName} style={{marginTop: "30%", marginBottom: "30%"}}>
+                    <div style={{width: "80%"}}>
+                        <Divider orientation="center">
+                            <h2>Work</h2>
                         </Divider>
                     </div>
+                    <div className="row flex justify-content-lg-start">
+                        <div>
+                            <Tabs defaultActiveKey="0" tabPosition='left' style={{height: "auto"}}>
+                                {this.state.tabList.map(t => {
+                                    return (<TabPane tab={t.name} key={t.key} style={{width: "80%"}}>
+                                        {t.value}
+                                    </TabPane>)
+                                })}
+                            </Tabs>
+                        </div>
+                    </div>
                 </div>
-            </div>);
+            </div>
+
+        );
+    }
+
+
+
+
+
+    updateDimensions = () => {
+        if (this.state.observe) {
+            const observer = new IntersectionObserver(entries => {
+                entries.forEach(entry => {
+                    const ratio = entry.intersectionRatio;
+                    if (entry.intersectionRatio > 0) {
+                        switch (true) {
+                            case (ratio > 0.25):
+                                this.setState({wrapperClassName: 'work-wrapper'});
+                                // observer.unobserve(document.querySelector('.transition-wrapper'));
+                                console.log("Case: 4");
+                                this.setState({observe: false});
+                        }
+                    }
+                });
+            });
+
+            if (this.state.observe) {
+                observer.observe(document.querySelector('.transition-wrapper-w'));
+            } else {
+            }
+        }
+
+
+    }
+
+    componentDidMount() {
+        window.addEventListener('scroll', this.updateDimensions);
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('scroll', this.updateDimensions)
     }
 }
 
