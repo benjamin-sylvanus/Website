@@ -1,7 +1,6 @@
 import {Component} from "react";
 import React from 'react';
 import '../styles/WorkExperience.css'
-
 import {Divider, Tabs} from 'antd';
 
 const {TabPane} = Tabs;
@@ -63,10 +62,6 @@ class WorkExperience extends Component {
         );
     }
 
-
-
-
-
     updateDimensions = () => {
         if (this.state.observe) {
             const observer = new IntersectionObserver(entries => {
@@ -79,6 +74,9 @@ class WorkExperience extends Component {
                                 // observer.unobserve(document.querySelector('.transition-wrapper'));
                                 console.log("Case: 4");
                                 this.setState({observe: false});
+                                break;
+                            default:
+                                break;
                         }
                     }
                 });
@@ -89,8 +87,6 @@ class WorkExperience extends Component {
             } else {
             }
         }
-
-
     }
 
     componentDidMount() {

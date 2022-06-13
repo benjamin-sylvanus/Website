@@ -1,14 +1,11 @@
 import './App.css';
 import React, {Component} from "react";
 import Hero from "./components/Hero";
-import Foot from "./components/foot";
 import NavBar from "./components/NavBar";
-import EmailContact from "./components/emailContact";
 import AboutMe from "./components/AboutMe";
 import WorkExperience from "./components/WorkExperience";
 import Experience from "./components/Experience";
 import Contact from "./components/Contact";
-
 
 class App extends Component {
     state = {
@@ -17,10 +14,9 @@ class App extends Component {
         phone: "253-820-0491"
     };
 
-
     render() {
         return (
-            <div scroll="no">
+            <div>
                 <NavBar/>
                 <main className="container">
                     <Hero delay="2000ms"/>
@@ -33,7 +29,6 @@ class App extends Component {
         );
     }
 }
-
 export default App;
 
 

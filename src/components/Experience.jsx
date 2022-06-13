@@ -35,15 +35,16 @@ class Experience extends Component {
                 <p>Created a Heart Rate Variability (HRV) monitor using an Arduino MEGA2560 and pulse sensor </p>
                 {/*<p>Successfully implemented a Beat Detection System, Signal Filtering, Beat Rejection and HRV*/}
                 {/*    calculation</p>*/}
-            </ul>, date: 2021, row: 0, img: HRV, imageWrapper: "image-holder-wrapper", id: 3}
-        //{
-        //     title: 'EMG Device', value: <ul className='ul-left' style={{}}>
-        //         <p>Used the electromyography (EMG) sensor on a BITalino Microcontroller to control the users
-        //             keyboard</p>
-        //         {/*<p>Isolated the movements of specific fingers to perform a variety of keyboard shortcuts using*/}
-        //         {/*    Pyautogui</p>*/}
-        //     </ul>, date: 2021, row: 1, img: EMG, imageWrapper: "image-holder-wrapper", id: 4
-        // }
+            </ul>, date: 2021, row: 0, img: HRV, imageWrapper: "image-holder-wrapper", id: 3
+        }
+            //{
+            //     title: 'EMG Device', value: <ul className='ul-left' style={{}}>
+            //         <p>Used the electromyography (EMG) sensor on a BITalino Microcontroller to control the users
+            //             keyboard</p>
+            //         {/*<p>Isolated the movements of specific fingers to perform a variety of keyboard shortcuts using*/}
+            //         {/*    Pyautogui</p>*/}
+            //     </ul>, date: 2021, row: 1, img: EMG, imageWrapper: "image-holder-wrapper", id: 4
+            // }
         ]
     };
 
@@ -70,8 +71,7 @@ class Experience extends Component {
 
     render() {
         const {data} = this.state
-        return (//Fill in about me
-
+        return (
             <div className={this.state.wrapperClassName}>
                 <div style={{marginTop: "30%", marginBottom: "30%"}}>
                     <div style={{width: "100%"}}>
@@ -81,43 +81,43 @@ class Experience extends Component {
                     </div>
                     <Row gutter={20} align="stretch" justify="space-around">
                         <>
-
-                        {data.map(item => {
-
-                            if (item.row === 0) {
-                                return (<Col span={7}>
-                                    <Card className="ant-card-hoverable wrapper-card image-holder"
-                                          title={item.title} bordered={false}
-                                          extra={item.date} style={{height: "100%", borderRadius: 10}}
-                                          cover={<img className={item.imageWrapper} alt="example" src={item.img}
-                                                      style={{scale: "100%",width:"100%",maxHeight:150}}/>}
-                                          onMouseOver={() => this.handleHover(item)}
-                                          onMouseLeave={() => this.handleExit(item)}>
-                                        {item.value}
-                                    </Card>
-                                </Col>)
-                            }
-                        })}
+                            {/* eslint-disable-next-line array-callback-return */}
+                            {data.map(item => {
+                                if (item.row === 0) {
+                                    return (<Col span={7}>
+                                        <Card className="ant-card-hoverable wrapper-card image-holder"
+                                              title={item.title} bordered={false}
+                                              extra={item.date} style={{height: "100%", borderRadius: 10}}
+                                              cover={<img className={item.imageWrapper} alt="example" src={item.img}
+                                                          style={{scale: "100%", width: "100%", maxHeight: 150}}/>}
+                                              onMouseOver={() => this.handleHover(item)}
+                                              onMouseLeave={() => this.handleExit(item)}>
+                                            {item.value}
+                                        </Card>
+                                    </Col>)
+                                }
+                            })}
                         </>
                     </Row>
 
-                    <Row gutter={20} align="stretch" justify="start" style={{paddingTop:20}}>
+                    <Row gutter={20} align="stretch" justify="start" style={{paddingTop: 20}}>
                         <>
-                        {data.map(item => {
-                            if (item.row === 1) {
-                                return (<Col span={7}>
-                                    <Card className="ant-card-hoverable wrapper-card image-holder"
-                                          title={item.title} bordered={false}
-                                          extra={item.date} style={{height: "100%", borderRadius: 10}}
-                                          cover={<img className={item.imageWrapper} alt="example" src={item.img}
-                                                      style={{scale: "100%",width:"100%",maxHeight:150}}/>}
-                                          onMouseOver={() => this.handleHover(item)}
-                                          onMouseLeave={() => this.handleExit(item)}>
-                                        {item.value}
-                                    </Card>
-                                </Col>)
-                            }
-                        })}
+                            {/* eslint-disable-next-line array-callback-return */}
+                            {data.map(item => {
+                                if (item.row === 1) {
+                                    return (<Col span={7}>
+                                        <Card className="ant-card-hoverable wrapper-card image-holder"
+                                              title={item.title} bordered={false}
+                                              extra={item.date} style={{height: "100%", borderRadius: 10}}
+                                              cover={<img className={item.imageWrapper} alt="example" src={item.img}
+                                                          style={{scale: "100%", width: "100%", maxHeight: 150}}/>}
+                                              onMouseOver={() => this.handleHover(item)}
+                                              onMouseLeave={() => this.handleExit(item)}>
+                                            {item.value}
+                                        </Card>
+                                    </Col>)
+                                }
+                            })}
                         </>
                     </Row>
                 </div>
@@ -135,9 +135,12 @@ class Experience extends Component {
                         switch (true) {
                             case (ratio > 0.2):
                                 this.setState({wrapperClassName: 'experience-wrapper'});
-                                // observer.unobserve(document.querySelector('.transition-wrapper'));
                                 console.log("Case: 4");
                                 this.setState({observe: false});
+                                break;
+                            default:
+                                break;
+
                         }
                     }
                 });

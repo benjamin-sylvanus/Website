@@ -1,13 +1,8 @@
 import {Component} from "react";
 import React from 'react';
 import '../styles/AboutMe.css'
-import {Divider, Card} from 'antd';
+import {Divider} from 'antd';
 import 'antd/dist/antd.dark.min.css';
-import {Button, OverlayTrigger, Tooltip} from "react-bootstrap";
-
-const renderTooltip = (props, text) => (<Tooltip id="email-tooltip" {...props}>
-    {text}
-</Tooltip>);
 
 
 class AboutMe extends Component {
@@ -74,14 +69,13 @@ class AboutMe extends Component {
                 entries.forEach(entry => {
                     const ratio = entry.intersectionRatio;
                     if (entry.intersectionRatio > 0) {
-                        // eslint-disable-next-line default-case
                         switch (true) {
                             case (ratio > 0.25):
                                 this.setState({wrapperClassName: 'about-me-wrapper'});
-                                // observer.unobserve(document.querySelector('.transition-wrapper'));
-                                // window.removeEventListener('scroll', this.updateDimensions)
-                                // console.log("Case: 4");
                                 this.setState({observe: false});
+                                break;
+                            default:
+                                break;
                         }
                     }
                 });
