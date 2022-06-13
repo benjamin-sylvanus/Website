@@ -9,10 +9,10 @@ class WorkExperience extends Component {
     state = {
         tabList: [{
             name: "Martinos", value: <ol>
-                <p>Primarily focused on histological analysis and diffusion MRI simulation</p>
-                <p>Created an image processing pipeline and user interface to fix disconnected segments in cells</p>
-                <p>Generated surface and volume meshes for diffusion MRI simulation in Spin Doctor</p>
-                <p>Presented at the annual conference for the International Society for Magnetic Resonance in
+                <p className="p-format">Primarily focused on histological analysis and diffusion MRI simulation</p>
+                <p className="p-format">Created an image processing pipeline and user interface to fix disconnected segments in cells</p>
+                <p className="p-format">Generated surface and volume meshes for diffusion MRI simulation in Spin Doctor</p>
+                <p className="p-format">Presented at the annual conference for the International Society for Magnetic Resonance in
                     Medicine.
                 </p>
             </ol>, key: "0"

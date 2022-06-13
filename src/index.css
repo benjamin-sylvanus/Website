@@ -78,6 +78,15 @@
     -webkit-tap-highlight-color: transparent
 }
 
+.p-format {
+    font-family: var(--bs-body-font-family);
+    font-size: var(--bs-body-font-size);
+    font-weight: var(--bs-body-font-weight);
+    line-height: var(--bs-body-line-height);
+    -webkit-text-size-adjust: 100%;
+    -webkit-tap-highlight-color: transparent
+}
+
 .a-flow {
     font-size: clamp(14px, 1.5vw, 22px);
 }
@@ -239,14 +248,14 @@ code {
     transform: scale(1.2);
 
 }
+
 .hero.appear-active {
     opacity: 1;
     filter: none;
     transform: none;
-    transition:
-            opacity 1s cubic-bezier(0.68, -0.6, 0.32, 1.4),
-            filter 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4),
-            transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4);
+    transition: opacity 1s cubic-bezier(0.68, -0.6, 0.32, 1.4),
+    filter 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4),
+    transform 0.5s cubic-bezier(0.68, -0.6, 0.32, 1.4);
 }
 
 .hero-appear-done {
@@ -255,7 +264,6 @@ code {
     transform: none;
     filter: none;
 }
-
 
 
 .a.nav-link.appear {
@@ -427,6 +435,7 @@ ABOUT ME TRANSITION
     background-color: rgba(5, 23, 65, 0.46) !important;
     transition: all 1s;
 }
+
 .wrapper-card:hover {
     background-color: rgba(11, 28, 77, 0.32) !important;
     transition: all 1s;
