@@ -16,7 +16,7 @@ class NavComponent extends Component {
     state = {className: "badge badge-pill badge-primary"}
 
     render() {
-        return (<a className="nav-link " href={this.props.href}>
+        return (<a className="nav-link " href={this.props.href} target={this.props.target} rel ={this.props.rel}>
                         <span
                             className={this.state.className}
                             onMouseOver={() => this.onHover()} onMouseLeave={() => this.onExit()}>

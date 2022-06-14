@@ -19,7 +19,7 @@ class App extends Component {
             <div>
                 <NavBar/>
                 <main className="container">
-                    <Hero delay="2000ms"/>
+                    <Hero delay="1300ms"/>
                     <AboutMe/>
                     <WorkExperience/>
                     <Experience/>

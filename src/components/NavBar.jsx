@@ -18,9 +18,10 @@ class NavBar extends Component {
             id: 2,
             value: "LinkedIn",
             href: "https://www.linkedin.com/in/benjamin-sylvanus-930640229/"
-        }, {id: 3, value: "Resume", href: 'https://www.linkedin.com/in/benjamin-sylvanus-930640229/'}],
+        }, {id: 3, value: "Resume", href: 'resume.pdf', target: "_blank", rel:"noopener noreferrer"}],
         navLeft: [{id: 0, value: "Logo", href: "#"}],
     };
+
 
     render() {
         return (
