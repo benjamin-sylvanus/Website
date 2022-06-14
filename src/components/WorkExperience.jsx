@@ -18,16 +18,16 @@ class WorkExperience extends Component {
             </ol>, key: "0"
         }, {
             name: "RESIST", value: <ul>
-                <p>Created a cell counting program that worked in parallel with image reconstruction software.</p>
-                <p>Debugged a program that quantified the tissue present in histological images of the lungs and
+                <p className="p-format">Created a cell counting program that worked in parallel with image reconstruction software.</p>
+                <p className="p-format">Debugged a program that quantified the tissue present in histological images of the lungs and
                     aorta
                 </p>
-                <p>Performed daily In Vivo experiments and measurements for the majority of the lab’s studies</p>
-                <p>Coordinated with graduate students to design and perform two acute cotinine studies.</p>
-                <p>Prepared the lab for a safety audit. Ensured all chemical and animal protocols were up to
+                <p className="p-format">Performed daily In Vivo experiments and measurements for the majority of the lab’s studies</p>
+                <p className="p-format">Coordinated with graduate students to design and perform two acute cotinine studies.</p>
+                <p className="p-format">Prepared the lab for a safety audit. Ensured all chemical and animal protocols were up to
                     standard
                 </p>
-                <p>Designed and installed components for the wildland fire study</p>
+                <p className="p-format">Designed and installed components for the wildland fire study</p>
             </ul>, key: "1"
         }],
 
