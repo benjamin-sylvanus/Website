@@ -1,27 +1,15 @@
 import React, {Component} from "react";
+import {Button} from "antd";
+
 
 class NavComponent extends Component {
-    onHover() {
-        const c = this.state
-        c.className = "badge badge-pill badge-secondary"
-        this.setState(c)
-    }
-
-    onExit() {
-        const c = this.state
-        c.className = "badge badge-pill badge-primary"
-        this.setState(c)
-    }
-
-    state = {className: "badge badge-pill badge-primary"}
+    state = {className: "ghost"}
 
     render() {
-        return (<a className="nav-link " href={this.props.href} target={this.props.target} rel ={this.props.rel}>
-                        <span
-                            className={this.state.className}
-                            onMouseOver={() => this.onHover()} onMouseLeave={() => this.onExit()}>
-            {this.props.value}
-            </span>
+        return (
+            <a className="nav-link" href={this.props.href} target={this.props.target} rel={this.props.rel}>
+                <Button  type={this.state.className} ghost shape={'round'} size={'small'} icon={this.props.icon}>
+                </Button>
             </a>
         )
     }

@@ -16,7 +16,9 @@ class NavPack extends Component {
                                 <li>
                                     <NavComponent
                                         value={nav.value}
-                                        href={nav.href}>
+                                        href={nav.href}
+                                        icon={nav.icon}
+                                    >
                                     </NavComponent>
                                 </li>
                             </CSSTransition>

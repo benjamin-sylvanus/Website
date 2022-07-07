@@ -3,6 +3,8 @@ import NavPack from "./NavPack";
 import Navbar from 'react-bootstrap/Navbar';
 import '../styles/NavBar.css';
 import {Nav} from "react-bootstrap";
+import { GithubOutlined, LinkedinOutlined} from '@ant-design/icons';
+
 
 //TODO:
 // Fix Collapse & Expand; Might need custom transition.
@@ -14,11 +16,11 @@ import {Nav} from "react-bootstrap";
  */
 class NavBar extends Component {
     state = {
-        navRight: [{id: 1, value: "Github", href: "https://github.com/benjamin-sylvanus"}, {
+        navRight: [{id: 1, value: "Github", href: "https://github.com/benjamin-sylvanus", icon: <GithubOutlined/>}, {
             id: 2,
             value: "LinkedIn",
-            href: "https://www.linkedin.com/in/benjamin-sylvanus-930640229/"
-        }, {id: 3, value: "Resume", href: 'resume.pdf', target: "_blank", rel:"noopener noreferrer"}],
+            href: "https://www.linkedin.com/in/benjamin-sylvanus-930640229/", icon: <LinkedinOutlined />
+        }, {id: 3, value: "Resume", href: 'resume.pdf', target: "_blank", rel:"noopener noreferrer", icon: <GithubOutlined/>}],
         navLeft: [{id: 0, value: "Logo", href: "#"}],
     };
 
