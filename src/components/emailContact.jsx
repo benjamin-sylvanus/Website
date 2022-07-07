@@ -1,5 +1,6 @@
 import {Component} from "react";
-import {Button, OverlayTrigger, Tooltip} from "react-bootstrap";
+import {OverlayTrigger, Tooltip} from "react-bootstrap";
+import {Button} from 'antd';
 import Alert from "react-bootstrap/Alert";
 
 const renderTooltip = (props,text) => (
@@ -28,7 +29,7 @@ class EmailContact extends Component {
         const {email} = this.props;
         return (
             <OverlayTrigger placement="right" delay={{show: 250,hide: 300}} overlay={renderTooltip(this.props,"Copy")}>
-                <Button variant="success" onClick={()=>this.handleClick(email)}>Email</Button>
+                <Button type={"ghost"} ghost onClick={()=>this.handleClick(email)}>Email</Button>
             </OverlayTrigger>
         )
     }
