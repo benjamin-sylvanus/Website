@@ -1,32 +1,3 @@
-/*@media (min-width: 576px) {*/
-/*    .container-main {*/
-/*        max-width: 500px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 768px) {*/
-/*    .container-main {*/
-/*        max-width: 700px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 992px) {*/
-/*    .container-main {*/
-/*        max-width: 960px;*/
-/*    }*/
-/*}*/
-/*@media (min-width: 1200px) {*/
-/*    .container-main {*/
-/*        max-width: 1140px;*/
-
-/*    }*/
-/*}*/
-
-/*@media (min-width: 1500px) {*/
-/*    .container-main {*/
-/*        max-width: 1300px;*/
-
-/*    }*/
-/*}*/
-
 @media (min-width: 960px) {
     .container-main {
         max-width: 90%;
@@ -58,12 +29,15 @@
     --bs-body-color: rgba(188, 143, 143, 0.32);
     --bs-body-bg: #fff;
     --standard-bg: #2e3546;
+    --standard-bg-op: rgba(46, 53, 70, 0.4);
+    --standard-bg-cold: rgba(63, 85, 131, 0.37);
+    --standard-bg-colder: rgba(97, 87, 107, 0.43);
     --fz-xl: 20px;
+    --navy-shadow: rgba(3, 19, 42, 0.7);
 }
 
 #html {
     background: var(--standard-bg);
-
 }
 
 #body {
@@ -78,7 +52,7 @@
     -webkit-tap-highlight-color: transparent
 }
 
-.-foot { background-color: var(--bs-body-color);
+.-foot { background-color: var(--standard-bg-cold);
 }
 
 .p-p {
@@ -94,8 +68,29 @@
     -webkit-box-align: center;
 }
 
+.kit-bg-blr {
+    -webkit-backdrop-filter: blur(10px);
+
+}
+.kit-bg-blr-5 {
+
+}
+
+/*.ant-drawer-wrapper-body { background-color: var(--standard-bg-cold)!important; -webkit-backdrop-filter: blur(5px);}*/
+
+.ant-drawer, .ant-drawer-top, .ant-drawer-open, .kit-bg-blr-5, .ant-drawer, .ant-drawer-right, .ant-drawer-open, .ant-drawer-top, .ant-drawer-content, .ant-drawer-mask .ant-drawer-content-wrapper {background: rgba(255, 255, 255, 0)}
+.ant-drawer-content { background: var(--standard-bg-cold) !important; -webkit-backdrop-filter: blur(15px);}
+
+
+/* .ant-tabs-nav-wrap{ flex: none!important; justify-content: center !important; flex: unset !important;}*/
+/*.ant-tabs>.ant-tabs-nav, .ant-tabs>div>.ant-tabs-nav { justify-content: center}*/
+
+
+/*.ant-tabs>.ant-tabs-nav, .ant-tabs>div>.ant-tabs-nav {*/
+/*    flex: unset !important;*/
+/*}*/
+
 .stop-scrolling {
-    height: 100%;
     overflow: hidden;
 }
 
@@ -152,8 +147,9 @@
 }
 
 .navbar {
-    background: var(--standard-bg);
+    /*background: var(--standard-bg-op);*/
 }
+
 
 .container-fluid {
     background: #282c34

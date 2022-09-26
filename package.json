@@ -10,6 +10,7 @@
     "antd": "^4.20.6",
     "react": "^18.1.0",
     "react-bootstrap": "^2.4.0",
+    "react-breakpoints": "^3.0.3",
     "react-dom": "^18.1.0",
     "react-dynamic-font": "^2.0.1",
     "react-pdf": "^5.7.2",

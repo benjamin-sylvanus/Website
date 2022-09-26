@@ -9,18 +9,16 @@ class WorkExperience extends Component {
     state = {
         tabList: [{
             name: "Martinos", value: <ol>
+                <p className="p-format">Currently working on generating voxelized geometries for Monte Carlo
+                    Simulations</p>
                 <p className="p-format">Primarily focused on histological analysis and diffusion MRI simulation</p>
-                <p className="p-format">Created an automated pipeline to fix disconnected
-                    segments in cells</p>
+                <p className="p-format">Created an automated pipeline to fix disconnected segments in cells </p>
                 <p className="p-format">Implemented a user interface for manual correction and verification</p>
-                <p className="p-format">Used Blender and other open source tools to generate surface and volume meshes for diffusion MRI simulations</p>
+                <p className="p-format">Utilized Tetgen and Blender to generate volume meshes for diffusion MRI
+                    simulations</p>
                 <p className="p-format">Presented at the annual conference for the International Society for Magnetic
-                    Resonance in
-                    Medicine
-                </p>
-                <p className="p-format">
-                    Currently working on generating voxelized geometries for Monte Carlo Simulations
-                </p>
+                    Resonance in Medicine</p>
+
             </ol>, key: "0"
         }, {
             name: "RESIST", value: <ul>
@@ -55,9 +53,9 @@ class WorkExperience extends Component {
                     </div>
                     <div className="row flex justify-content-lg-start">
                         <div>
-                            <Tabs defaultActiveKey="0" tabPosition='left' style={{height: "auto"}}>
+                            <Tabs defaultActiveKey="0" tabPosition="left">
                                 {this.state.tabList.map(t => {
-                                    return (<TabPane tab={t.name} key={t.key} style={{width: "80%"}}>
+                                    return (<TabPane tab={t.name} key={t.key}>
                                         {t.value}
                                     </TabPane>)
                                 })}
